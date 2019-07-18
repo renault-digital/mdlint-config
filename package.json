@@ -1,0 +1,55 @@
+{
+  "name": "@renault-digital/mdlint-config",
+  "version": "1.0.0",
+  "description": "Markdown Lint config following Renault Digital coding style.",
+  "private": false,
+  "main": "markdownlint.json",
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renault-digital/mdlint-config.git"
+  },
+  "homepage": "https://github.com/renault-digital/mdlint-config",
+  "bugs": "https://github.com/renault-digital/mdlint-config/issues",
+  "scripts": {
+    "test": "yarn test:eslint && yarn test:markdown && yarn test:unit",
+    "test:unit": "mocha --recursive tests/**/*.test.js",
+    "test:eslint": "eslint --report-unused-disable-directives . --ext .js,.json --ignore-pattern *.fixture.js",
+    "test:markdown": "markdownlint *.md --config markdownlint.json"
+  },
+  "keywords": [
+    "mdlint",
+    "markdownlint",
+    "markdown",
+    "markdown lint",
+    "renault digital"
+  ],
+  "files": [
+    "markdownlint.json"
+  ],
+  "contributors": [
+    "Romain DARY <romain.dary@gmail.com>"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test"
+    }
+  },
+  "eslintConfig": {
+    "extends": "@renault-digital/eslint-config"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@renault-digital/eslint-config": "^1.0.2",
+    "eslint": "^5.16.0",
+    "husky": "^3.0.0",
+    "mocha": "^6.1.4",
+    "should": "^13.2.3"
+  },
+  "dependencies": {
+    "markdownlint": "^0.15.0",
+    "markdownlint-cli": "^0.17.0"
+  }
+}

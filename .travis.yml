@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '8'
+- '9'
+- '10'
+- '11'
+- '12'
+deploy:
+  provider: npm
+  email: romain.dary@gmail.com
+  api_key:
+    secure: ir1trllREJ2M+9W6nNdGvsJIz59nzkjHOj2m2ISCnJJC/hCzz5yTN1H0xkpl1HHgneSps3wxEACqqkRT5MukJtkXDXmMy3qHdLZq4BuFjowbAgrm4+9pukYgj7r6e/jG7vJYGqGDQMENh6ipSxR2tFXmLPV+SIKXvKkKLO0TAxrwU79WsGvpECS3rqvy0Q72gQqglt1mC+JqFyoDKHe8XOXjrsSkyONimtJNukfAOFV2Xt8NbjCwGvBUBS8/dgz0qU7S8P2wNkRn9UX7HJQWKz5n0GP/YVQUD88VGKV8nCH8z8A8opEmUFjbQ5mcoxpmtw+U6JlR/2WqLaSZNLIoHz0vOk7B7tzhRxBl8nx+3qDx8z7w1mKn397Mexezbgk+G3SxBLsxzu2UtQ6bpectyAvDjr3Op7b08sLZ43NKX36zXuoHMTW+VghZYDoa83MZNzw1cf51vo8V9hQ+9Oh1R1K7tYLl4INXbSzcqX+xpelB0G3rvDMWN3bAyO3vnqrxenXZ/Ol+YWoImiJG3LGYI2oLwWj2QyP4CPVxfJxqlfe/dUWvHmfVthwSSEOfVYaWV/uYsLDMp3t57TFBVcu2OytPZkYKjftyqA0bqyCRnKOriQmP2KHgZ14gqmEWzt0N9H5Ag8CKwmYe/dq3rWnrQL0QAZxPt5adiLNDUT0QnXc=
+  on:
+    tags: true
+    repo: renault-digital/mdlint-config
