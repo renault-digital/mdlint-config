@@ -1,59 +1,69 @@
-# Renault Digital ESLint config
+# Renault Digital Markdown Lint config
 
-![Travis (.org)](https://img.shields.io/travis/renault-digital/lint-config.svg?style=flat-square)
-![npm](https://img.shields.io/npm/v/@renault-digital/lint-config.svg?style=flat-square)
+[![Build Status](https://img.shields.io/travis/renault-digital/mdlint-config.svg)](https://travis-ci.org/renault-digital/mdlint-config)
+[![Npm Version](https://img.shields.io/npm/v/@renault-digital/mdlint-config.svg)](https://www.npmjs.com/package/@renault-digital/mdlint-config)
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Contribute](#contribute)
 
 ## Installation
 
+Using `npm` :
+
 ```sh
-npm install --save-dev @renault-digital/lint-config
-
-# or
-
-yarn add --dev @renault-digital/lint-config
+npm install --save-dev @renault-digital/mdlint-config
 ```
 
-Then, [configure ESLint](https://eslint.org/docs/user-guide/configuring) with one or more `.eslintrc.json` files as
-appropriate.
+Or using `yarn` :
 
-## Example configurations
+```sh
+yarn add --dev @renault-digital/mdlint-config
+```
 
-Bellow are some recommended uses:
+## Usage
 
-### A typical Server project with NodeJS and Mocha tests
+Please follow [configure mdlint](https://mdlint.org/docs/user-guide/configuring) for configuration.
 
-`.eslintrc.json`:
+The follow rules are available (you can combine them) :
+
+- `@renault-digital` : General Markdown rules
+
+A basic usage will be in a file `.markdownlint.json`:
 
 ```json
 {
-  "extends": "@renault-digital/lint-config/server"
+  "extends": "@renault-digital/mdlint-config"
 }
 ```
 
-### Lint your Gherkin features
+And after :
 
-`package.json` :
+```sh
+yarn markdownlint .
+```
+
+## Examples
+
+Bellow are some recommended usage.
+
+### A common usage
+
+`.markdownlint.json`:
 
 ```json
 {
-    "test:lint:gherkin" : "gherkin-lint -c node_modules/@renault-digital/lint-config/gherkin.json"
+  "extends": "@renault-digital/mdlint-config"
 }
 ```
 
-### Lint your Markdown
+## Contribute
 
-`package.json` :
-
-```json
-{
-    "test:lint:md" : "markdownlint *.md --config node_modules/@renault-digital/lint-config/markdownlint.json"
-}
-```
-
-## Proposing changes
+### Proposing changes
 
 Major changes should be discussed GitHub.
 
-## Semver policy
+### Semver policy
 
-Same approach as in ESLint, see [Semantic Versioning Policy](https://github.com/eslint/eslint#user-content-semantic-versioning-policy).
+Same approach as in mdlint, see [Semantic Versioning Policy](https://github.com/mdlint/mdlint#user-content-semantic-versioning-policy).
