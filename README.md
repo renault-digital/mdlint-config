@@ -34,7 +34,7 @@ A basic usage will be in a file `.markdownlint.json`:
 
 ```json
 {
-  "extends": "@renault-digital/mdlint-config"
+  "extends": "./node_modules/@renault-digital/mdlint-config/markdownlint.json"
 }
 ```
 
@@ -54,7 +54,7 @@ Bellow are some recommended usage.
 
 ```json
 {
-  "extends": "@renault-digital/mdlint-config"
+  "extends": "./node_modules/@renault-digital/mdlint-config/markdownlint.json"
 }
 ```
 
